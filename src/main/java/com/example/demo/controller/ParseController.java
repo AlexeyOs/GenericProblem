@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class ParseController {
 
-    private final String fooExtended = "{\n" +
+    private final String personFullDto = "{\n" +
             "  \"id\": 5,\n" +
             "  \"name\": \"Вася\",\n" +
             "  \"parentPhone\" : \"111111\",\n" +
@@ -32,7 +32,7 @@ public class ParseController {
             "  ]\n" +
             "}";
 
-    private final String foo ="{\n" +
+    private final String personDto ="{\n" +
             "  \"id\": 5,\n" +
             "  \"name\": \"Вася\",\n" +
             "  \"childs\": [{\n" +
@@ -50,6 +50,6 @@ public class ParseController {
 
     @GetMapping(value = "/foo")
     public void importFormFromOtherServer() throws JsonProcessingException {
-        parseService.jsonParser(foo);
+        parseService.jsonParser(personDto);
     }
 }

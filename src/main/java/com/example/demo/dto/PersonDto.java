@@ -4,9 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
-public class ExtendedFoo extends Foo {
-    private String parentPhone;
+public class PersonDto {
+    private Integer id;
+    private String name;
+    List<PersonDto> childs;
 }

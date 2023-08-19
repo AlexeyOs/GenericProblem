@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.ExtendedFoo;
-import com.example.demo.dto.Foo;
+import com.example.demo.dto.PersonFullDto;
+import com.example.demo.dto.PersonDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -19,10 +19,10 @@ public class ParseService {
    public void jsonParser(String json) throws JsonProcessingException {
 
          if (json.contains("parentPhone")){
-            ExtendedFoo extendedFoo = objectMapper.readValue(json, ExtendedFoo.class);
-            log.info(extendedFoo.toString());
+            PersonFullDto extendedFooDto = objectMapper.readValue(json, PersonFullDto.class);
+            log.info(extendedFooDto.toString());
          } else {
-            Foo foo = objectMapper.readValue(json, Foo.class);
+            PersonDto foo = objectMapper.readValue(json, PersonDto.class);
             log.info(foo.toString());
          }
    }
