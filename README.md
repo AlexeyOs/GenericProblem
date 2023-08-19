@@ -1,2 +1,2 @@
 # GenericProblem
-Проблема использования дженерик в классе MyClass, если есть свойство child типа типа MyClass
+Проблема использования дженерик в классе PersonDto, если есть свойство childs типа типа List<PersonDto>
