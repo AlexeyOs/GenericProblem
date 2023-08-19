@@ -1,5 +1,6 @@
 # GenericProblem
-Проблема использования дженерик в классе PersonDto, если есть свойство childs типа List<PersonDto>
+Проблема использования дженерик в классе PersonDto, 
+если есть свойство childs типа List<PersonDto>
 
 Запрос для теста:
 ```
